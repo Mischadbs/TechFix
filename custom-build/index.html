@@ -71,10 +71,11 @@
       </p>
     </div>
 
-    <form action="https://formspree.io/f/xaqppbyb" method="POST" class="rounded-[2rem] border border-white/10 bg-white/5 p-8">
+    <form id="build-form" action="https://formspree.io/f/xaqppbyb" method="POST" class="rounded-[2rem] border border-white/10 bg-white/5 p-8">
       <input type="hidden" name="_subject" value="Nieuwe Techfix build aanvraag" />
-      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_captcha" value="true" />
       <input type="hidden" name="page" value="Techfix Custom Build formulier" />
+      <input type="hidden" name="form_time" id="form_time" />
 
       <div class="hidden" aria-hidden="true">
         <label for="_gotcha">Laat dit veld leeg</label>
@@ -176,9 +177,10 @@
         </button>
       </div>
 
-      <div id="form-status" class="mt-4" hidden></div>
+      <div id="form-status" class="mt-4 hidden rounded-2xl border px-4 py-3 text-sm"></div>
+
       <p class="mt-4 text-xs text-zinc-500">
-        Na het verzenden zie je een bevestiging van Formspree.
+        Dit formulier is beschermd tegen spam en geautomatiseerde inzendingen.
       </p>
     </form>
   </div>
@@ -197,6 +199,25 @@
   </div>
 </footer>
 
+  <script>
+    const form = document.getElementById('build-form');
+    const formTime = document.getElementById('form_time');
+    const statusBox = document.getElementById('form-status');
+
+    formTime.value = Date.now();
+
+    form.addEventListener('submit', function (e) {
+      const elapsed = Date.now() - Number(formTime.value);
+
+      if (elapsed < 3000) {
+        e.preventDefault();
+        statusBox.hidden = false;
+        statusBox.className = 'mt-4 rounded-2xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200';
+        statusBox.textContent = 'Je formulier is te snel verzonden. Wacht een paar seconden en probeer het opnieuw.';
+        return;
+      }
+    });
+  </script>
   <script src="../assets/app.js"></script>
 </body>
 </html>
