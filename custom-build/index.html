@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Techfix | Custom Build</title>
   <meta name="description" content="Vraag jouw Techfix custom build aan." />
+  <link rel="canonical" href="https://techfix.nl/custom-build/" />
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,18 +32,18 @@
   
 <header class="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur-xl">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-6">
-    <a href="../index.html" class="flex items-center gap-3">
+    <a href="/" class="flex items-center gap-3">
       <img src="../assets/logo-light.png" alt="Techfix logo" class="h-9 w-auto" />
     </a>
     <nav class="hidden items-center gap-7 md:flex">
-      <a data-nav href="../index.html" class="text-sm text-zinc-300 transition hover:text-techfix">Home</a>
-      <a data-nav href="../performance-lab/index.html" class="text-sm text-zinc-300 transition hover:text-techfix">Performance Lab</a>
-      <a data-nav href="../builds/index.html" class="text-sm text-zinc-300 transition hover:text-techfix">Builds</a>
-      <a data-nav href="../knowledge/index.html" class="text-sm text-zinc-300 transition hover:text-techfix">Knowledge</a>
-      <a data-nav href="../custom-build/index.html" class="text-sm text-zinc-300 transition hover:text-techfix">Custom Build</a>
-      <a data-nav href="../contact/index.html" class="text-sm text-zinc-300 transition hover:text-techfix">Contact</a>
+      <a data-nav href="/" class="text-sm text-zinc-300 transition hover:text-techfix">Home</a>
+      <a data-nav href="/performance-lab/" class="text-sm text-zinc-300 transition hover:text-techfix">Performance Lab</a>
+      <a data-nav href="/builds/" class="text-sm text-zinc-300 transition hover:text-techfix">Builds</a>
+      <a data-nav href="/knowledge/" class="text-sm text-zinc-300 transition hover:text-techfix">Knowledge</a>
+      <a data-nav href="/custom-build/" class="text-sm text-zinc-300 transition hover:text-techfix">Custom Build</a>
+      <a data-nav href="/contact/" class="text-sm text-zinc-300 transition hover:text-techfix">Contact</a>
     </nav>
-    <a href="../custom-build/index.html" class="rounded-2xl bg-techfix px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:opacity-90">Start jouw build</a>
+    <a href="/custom-build/" class="rounded-2xl bg-techfix px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:opacity-90">Start jouw build</a>
   </div>
 </header>
 
@@ -192,11 +193,11 @@
   <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-sm text-zinc-400 md:flex-row md:items-center md:justify-between lg:px-6">
     <div><span class="text-zinc-200">Techfix</span> — Performance engineering voor custom pc's</div>
     <div class="flex gap-6">
-      <a href="../performance-lab/index.html" class="transition hover:text-techfix">Performance Lab</a>
-      <a href="../builds/index.html" class="transition hover:text-techfix">Builds</a>
-      <a href="../knowledge/index.html" class="transition hover:text-techfix">Knowledge</a>
-      <a href="../custom-build/index.html" class="transition hover:text-techfix">Custom Build</a>
-      <a href="../contact/index.html" class="transition hover:text-techfix">Contact</a>
+      <a href="/performance-lab/" class="transition hover:text-techfix">Performance Lab</a>
+      <a href="/builds/" class="transition hover:text-techfix">Builds</a>
+      <a href="/knowledge/" class="transition hover:text-techfix">Knowledge</a>
+      <a href="/custom-build/" class="transition hover:text-techfix">Custom Build</a>
+      <a href="/contact/" class="transition hover:text-techfix">Contact</a>
     </div>
   </div>
 </footer>
@@ -219,6 +220,10 @@
         return;
       }
     });
+
+    if (window.location.pathname.endsWith('/index.html')) {
+      window.location.replace(window.location.pathname.replace('/index.html', '/'));
+    }
   </script>
   <script src="../assets/app.js"></script>
 </body>
