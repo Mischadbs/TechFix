@@ -28,12 +28,12 @@
 <body class="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-techfix/30 selection:text-white">
 
 <header class="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur-xl">
-  <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-    <a href="/" class="flex items-center gap-3">
-      <img src="../assets/logo-light.png" alt="Techfix logo" class="h-9 w-auto" />
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-6 lg:py-5">
+    <a href="/" class="flex items-center gap-3" aria-label="Techfix home">
+      <img src="../assets/logo-light.png" alt="Techfix logo" class="h-9 w-auto md:h-14 lg:h-16" />
     </a>
 
-    <nav class="hidden items-center gap-8 md:flex">
+    <nav class="hidden items-center gap-7 md:flex">
       <a href="/" class="text-sm text-zinc-300 hover:text-techfix">Home</a>
       <a href="/performance-lab/" class="text-sm text-zinc-300 hover:text-techfix">Performance Lab</a>
       <a href="/builds/" class="text-sm text-zinc-300 hover:text-techfix">Builds</a>
@@ -64,7 +64,7 @@
 
     <!-- BUILD 1 -->
     <a href="/builds/tf-001/" class="block rounded-[2rem] border border-white/10 bg-white/5 overflow-hidden hover:border-techfix/50 transition">
-      <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=1600&q=80" class="aspect-[4/3] w-full object-cover" />
+      <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=1600&q=80" alt="Techfix TF-001 build" class="aspect-[4/3] w-full object-cover" />
       <div class="p-6">
         <div class="text-sm uppercase tracking-[0.25em] text-techfix">TF-001</div>
         <h2 class="mt-3 text-2xl font-semibold text-white">4K gaming + creator workstation</h2>
@@ -91,14 +91,23 @@
 </main>
 
 <footer class="border-t border-white/10">
-  <div class="mx-auto flex max-w-7xl justify-between px-6 py-8 text-sm text-zinc-400">
-    <div>Techfix — Performance engineering</div>
+  <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-8 text-sm text-zinc-400 md:flex-row md:items-start md:justify-between lg:px-6">
+
+    <div>
+      <div><span class="text-zinc-200">Techfix</span> — Performance engineering voor custom pc's</div>
+
+      <div class="mt-3 text-xs text-zinc-500 leading-6">
+        KvK: 57281408<br>
+        BTW: NL155583700B01
+      </div>
+    </div>
+
     <div class="flex gap-6">
-      <a href="/performance-lab/">Performance Lab</a>
-      <a href="/builds/">Builds</a>
-      <a href="/knowledge/">Knowledge</a>
-      <a href="/custom-build/">Custom Build</a>
-      <a href="/contact/">Contact</a>
+      <a href="/performance-lab/" class="transition hover:text-techfix">Performance Lab</a>
+      <a href="/builds/" class="transition hover:text-techfix">Builds</a>
+      <a href="/knowledge/" class="transition hover:text-techfix">Knowledge</a>
+      <a href="/custom-build/" class="transition hover:text-techfix">Custom Build</a>
+      <a href="/contact/" class="transition hover:text-techfix">Contact</a>
     </div>
   </div>
 </footer>
