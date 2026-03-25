@@ -7,10 +7,13 @@
   <meta name="description" content="Techfix Performance Lab: engineering, tuning, thermiek en validatie voor custom pc's." />
   <link rel="canonical" href="https://techfix.nl/performance-lab/" />
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = {
       theme: {
@@ -22,110 +25,163 @@
       }
     }
   </script>
+
   <link rel="stylesheet" href="../assets/styles.css" />
+
+  <style>
+    html, body {
+      overflow-x: hidden;
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-techfix/30 selection:text-white">
-  <div class="pointer-events-none absolute inset-0 overflow-hidden">
+
+<body class="min-h-screen overflow-x-hidden bg-zinc-950 text-zinc-100 selection:bg-techfix/30 selection:text-white">
+
+  <!-- Background -->
+  <div class="pointer-events-none absolute inset-0 max-w-full overflow-hidden">
     <div class="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-techfix/15 blur-3xl"></div>
     <div class="absolute right-0 top-[32rem] h-80 w-80 rounded-full bg-techfix/10 blur-3xl"></div>
   </div>
-  
-<header class="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur-xl">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-6 lg:py-5">
-    <a href="/" class="flex items-center gap-3" aria-label="Techfix home">
-      <img src="../assets/logo-light.png" alt="Techfix logo" class="h-9 w-auto md:h-14 lg:h-16" />
-    </a>
-    <nav class="hidden items-center gap-7 md:flex">
-      <a data-nav href="/" class="text-sm text-zinc-300 transition hover:text-techfix">Home</a>
-      <a data-nav href="/performance-lab/" class="text-sm text-zinc-300 transition hover:text-techfix">Performance Lab</a>
-      <a data-nav href="/builds/" class="text-sm text-zinc-300 transition hover:text-techfix">Builds</a>
-      <a data-nav href="/knowledge/" class="text-sm text-zinc-300 transition hover:text-techfix">Knowledge</a>
-      <a data-nav href="/custom-build/" class="text-sm text-zinc-300 transition hover:text-techfix">Custom Build</a>
-      <a data-nav href="/contact/" class="text-sm text-zinc-300 transition hover:text-techfix">Contact</a>
-    </nav>
-    <a href="/custom-build/" class="rounded-2xl bg-techfix px-4 py-2 text-sm font-semibold text-zinc-950 hover:opacity-90">Start jouw build</a>
-  </div>
-</header>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-6 lg:py-5">
+      <a href="/" class="flex items-center gap-3" aria-label="Techfix home">
+        <img src="../assets/logo-light.png" alt="Techfix logo" class="h-9 w-auto md:h-14 lg:h-16" />
+      </a>
+
+      <nav class="hidden items-center gap-7 md:flex">
+        <a data-nav href="/" class="text-sm text-zinc-300 transition hover:text-techfix">Home</a>
+        <a data-nav href="/performance-lab/" class="text-sm text-zinc-300 transition hover:text-techfix">Performance Lab</a>
+        <a data-nav href="/builds/" class="text-sm text-zinc-300 transition hover:text-techfix">Builds</a>
+        <a data-nav href="/knowledge/" class="text-sm text-zinc-300 transition hover:text-techfix">Knowledge</a>
+        <a data-nav href="/custom-build/" class="text-sm text-zinc-300 transition hover:text-techfix">Custom Build</a>
+        <a data-nav href="/contact/" class="text-sm text-zinc-300 transition hover:text-techfix">Contact</a>
+      </nav>
+
+      <a href="/custom-build/" class="rounded-2xl bg-techfix px-4 py-2 text-sm font-semibold text-zinc-950 hover:opacity-90">
+        Start jouw build
+      </a>
+    </div>
+  </header>
 
   <main>
-<section class="mx-auto max-w-7xl px-6 pt-20 pb-10">
-  <div class="max-w-4xl">
-    <div class="text-sm uppercase tracking-[0.3em] text-techfix">Techfix Performance Lab</div>
-    <h1 class="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-white">Benchmark-scores zijn marketing. Stabiliteit onder belasting is engineering.</h1>
-    <p class="mt-6 text-lg text-zinc-300 max-w-3xl">Een snelle pc bouwen is relatief eenvoudig. Een systeem bouwen dat langdurig presteert, thermisch in balans blijft en voorspelbaar reageert onder echte belasting, is een ander vak. Daar zit de essentie van Techfix.</p>
-  </div>
-</section>
+    <section class="mx-auto max-w-6xl px-5 pt-16 pb-10 sm:pt-20 lg:px-6 lg:pt-24">
+      <div class="max-w-4xl">
+        <div class="text-sm uppercase tracking-[0.3em] text-techfix">Techfix Performance Lab</div>
+        <h1
+          class="mt-4 max-w-[16ch] text-[2.4rem] font-semibold leading-[1.03] tracking-[-0.03em] sm:text-[3rem] lg:text-[3.9rem]"
+          style="font-family: 'Space Grotesk', sans-serif;"
+        >
+          Benchmark-scores zijn marketing. Stabiliteit onder belasting is engineering.
+        </h1>
+        <p class="mt-6 max-w-3xl text-base leading-8 text-zinc-300 sm:text-lg">
+          Een snelle pc bouwen is relatief eenvoudig. Een systeem bouwen dat langdurig presteert, thermisch in balans blijft en voorspelbaar reageert onder echte belasting, is een ander vak. Daar zit de essentie van Techfix.
+        </p>
+      </div>
+    </section>
 
-<section class="mx-auto max-w-7xl px-6 py-10">
-  <div class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
-    <div class="relative aspect-[16/7]">
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80" alt="Hardware close-up als visual voor Techfix Performance Lab" class="h-full w-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/25 to-transparent"></div>
-      <div class="absolute bottom-0 left-0 right-0 p-6 text-sm text-zinc-200">Thermische controle, tuning en validatie zijn geen extra's. Ze zijn het product.</div>
-    </div>
-  </div>
-</section>
+    <section class="mx-auto max-w-6xl px-5 py-10 lg:px-6">
+      <div class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
+        <div class="relative aspect-[16/9] md:aspect-[16/7]">
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"
+            alt="Hardware close-up als visual voor Techfix Performance Lab"
+            class="h-full w-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/25 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5 text-sm text-zinc-200 sm:p-6">
+            Thermische controle, tuning en validatie zijn geen extra's. Ze zijn het product.
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="mx-auto max-w-7xl px-6 py-10">
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-      <div class="text-sm uppercase tracking-[0.3em] text-techfix">Waarom dit anders is</div>
-      <h2 class="mt-4 text-3xl font-semibold text-white">De meeste systemen worden geassembleerd. Deze worden afgestemd.</h2>
-      <p class="mt-4 text-zinc-300 leading-8">Techfix selecteert onderdelen niet alleen op ruwe prestaties, maar op gedrag in combinatie: airflow, koelpotentieel, efficiency, stabiliteit en workload fit. Dat levert systemen op die niet alleen snel zijn op papier, maar ook snel blijven in de praktijk.</p>
-    </div>
-    <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-      <div class="text-sm uppercase tracking-[0.3em] text-techfix">Wat het lab doet</div>
-      <ul class="mt-6 space-y-3 text-zinc-300">
-        <li>• Analyse van use case, workload en prioriteiten</li>
-        <li>• Componentkeuze op basis van prestaties én thermiek</li>
-        <li>• Fan curve tuning en airflow optimalisatie</li>
-        <li>• Undervolt/overclock afstemming waar zinvol</li>
-        <li>• Benchmarks en langdurige stabiliteitstests</li>
-        <li>• Documentatie via Performance Validation Report</li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <section class="mx-auto max-w-6xl px-5 py-10 lg:px-6">
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 sm:p-8">
+          <div class="text-sm uppercase tracking-[0.3em] text-techfix">Waarom dit anders is</div>
+          <h2 class="mt-4 text-2xl font-semibold text-white sm:text-3xl">De meeste systemen worden geassembleerd. Deze worden afgestemd.</h2>
+          <p class="mt-4 leading-8 text-zinc-300">
+            Techfix selecteert onderdelen niet alleen op ruwe prestaties, maar op gedrag in combinatie: airflow, koelpotentieel, efficiency, stabiliteit en workload fit. Dat levert systemen op die niet alleen snel zijn op papier, maar ook snel blijven in de praktijk.
+          </p>
+        </div>
 
-<section class="mx-auto max-w-7xl px-6 py-10">
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8"><div class="text-sm font-medium uppercase tracking-[0.3em] text-techfix">01</div><h3 class="mt-4 text-2xl font-semibold text-white">Analyse</h3><p class="mt-4 leading-7 text-zinc-300">Niet iedere workload vraagt om dezelfde prioriteiten. Gaming, rendering en lokale AI vragen om verschillende keuzes.</p></div>
-    <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8"><div class="text-sm font-medium uppercase tracking-[0.3em] text-techfix">02</div><h3 class="mt-4 text-2xl font-semibold text-white">Optimalisatie</h3><p class="mt-4 leading-7 text-zinc-300">Een goed systeem draait niet alleen hard, maar slim. Tuning, thermiek en noise behaviour horen daarbij.</p></div>
-    <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8"><div class="text-sm font-medium uppercase tracking-[0.3em] text-techfix">03</div><h3 class="mt-4 text-2xl font-semibold text-white">Validatie</h3><p class="mt-4 leading-7 text-zinc-300">Pas als prestaties aantoonbaar zijn, is een build klaar om geleverd te worden.</p></div>
-  </div>
-</section>
+        <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 sm:p-8">
+          <div class="text-sm uppercase tracking-[0.3em] text-techfix">Wat het lab doet</div>
+          <ul class="mt-6 space-y-3 text-zinc-300">
+            <li>• Analyse van use case, workload en prioriteiten</li>
+            <li>• Componentkeuze op basis van prestaties én thermiek</li>
+            <li>• Fan curve tuning en airflow optimalisatie</li>
+            <li>• Undervolt/overclock afstemming waar zinvol</li>
+            <li>• Benchmarks en langdurige stabiliteitstests</li>
+            <li>• Documentatie via Performance Validation Report</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<section class="mx-auto max-w-7xl px-6 py-10">
-  <div class="rounded-[2rem] border border-techfix/20 bg-techfix/10 p-8">
-    <div class="text-sm uppercase tracking-[0.3em] text-techfix">Volgende stap</div>
-    <h2 class="mt-4 text-3xl font-semibold text-white">Bekijk hoe dat eruitziet in een echte Proof Build.</h2>
-    <p class="mt-4 max-w-3xl leading-8 text-zinc-200">Daar zie je use case, hardwarekeuzes, benchmarks, thermische analyse en het uiteindelijke resultaat van tuning en validatie.</p>
-    <a href="/builds/" class="inline-block mt-8 rounded-2xl bg-techfix px-6 py-3 text-sm font-semibold text-zinc-950 hover:opacity-90">Bekijk Proof Builds</a>
-  </div>
-</section>
-</main>
-  
-<footer class="border-t border-white/10">
-  <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-8 text-sm text-zinc-400 md:flex-row md:items-start md:justify-between lg:px-6">
+    <section class="mx-auto max-w-6xl px-5 py-10 lg:px-6">
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 sm:p-8">
+          <div class="text-sm font-medium uppercase tracking-[0.3em] text-techfix">01</div>
+          <h3 class="mt-4 text-2xl font-semibold text-white">Analyse</h3>
+          <p class="mt-4 leading-7 text-zinc-300">
+            Niet iedere workload vraagt om dezelfde prioriteiten. Gaming, rendering en lokale AI vragen om verschillende keuzes.
+          </p>
+        </div>
 
-    <div>
-      <div><span class="text-zinc-200">Techfix</span> — Performance engineering voor custom pc's</div>
+        <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 sm:p-8">
+          <div class="text-sm font-medium uppercase tracking-[0.3em] text-techfix">02</div>
+          <h3 class="mt-4 text-2xl font-semibold text-white">Optimalisatie</h3>
+          <p class="mt-4 leading-7 text-zinc-300">
+            Een goed systeem draait niet alleen hard, maar slim. Tuning, thermiek en noise behaviour horen daarbij.
+          </p>
+        </div>
 
-      <div class="mt-3 text-xs text-zinc-500 leading-6">
-        KvK: 57281408<br>
-        BTW: NL155583700B01
+        <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 sm:p-8">
+          <div class="text-sm font-medium uppercase tracking-[0.3em] text-techfix">03</div>
+          <h3 class="mt-4 text-2xl font-semibold text-white">Validatie</h3>
+          <p class="mt-4 leading-7 text-zinc-300">
+            Pas als prestaties aantoonbaar zijn, is een build klaar om geleverd te worden.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-5 py-10 lg:px-6">
+      <div class="rounded-[2rem] border border-techfix/20 bg-techfix/10 p-6 sm:p-8">
+        <div class="text-sm uppercase tracking-[0.3em] text-techfix">Volgende stap</div>
+        <h2 class="mt-4 text-2xl font-semibold text-white sm:text-3xl">Bekijk hoe dat eruitziet in een echte Proof Build.</h2>
+        <p class="mt-4 max-w-3xl leading-8 text-zinc-200">
+          Daar zie je use case, hardwarekeuzes, benchmarks, thermische analyse en het uiteindelijke resultaat van tuning en validatie.
+        </p>
+        <a href="/builds/" class="mt-8 inline-block rounded-2xl bg-techfix px-6 py-3 text-sm font-semibold text-zinc-950 hover:opacity-90">
+          Bekijk Proof Builds
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-8 text-sm text-zinc-400 md:flex-row md:items-start md:justify-between lg:px-6">
+      <div>
+        <div><span class="text-zinc-200">Techfix</span> — Performance engineering voor custom pc's</div>
+        <div class="mt-3 text-xs leading-6 text-zinc-500">
+          KvK: 57281408<br>
+          BTW: NL155583700B01
+        </div>
+      </div>
+
+      <div class="flex gap-6">
+        <a href="/performance-lab/" class="transition hover:text-techfix">Performance Lab</a>
+        <a href="/builds/" class="transition hover:text-techfix">Builds</a>
+        <a href="/knowledge/" class="transition hover:text-techfix">Knowledge</a>
+        <a href="/custom-build/" class="transition hover:text-techfix">Custom Build</a>
+        <a href="/contact/" class="transition hover:text-techfix">Contact</a>
       </div>
     </div>
-
-    <div class="flex gap-6">
-      <a href="/performance-lab/" class="transition hover:text-techfix">Performance Lab</a>
-      <a href="/builds/" class="transition hover:text-techfix">Builds</a>
-      <a href="/knowledge/" class="transition hover:text-techfix">Knowledge</a>
-      <a href="/custom-build/" class="transition hover:text-techfix">Custom Build</a>
-      <a href="/contact/" class="transition hover:text-techfix">Contact</a>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <script>
     if (window.location.pathname.endsWith('/index.html')) {
