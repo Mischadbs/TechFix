@@ -1,21 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://techfix.nl/</loc>
+    <loc>https://www.techfix.nl/</loc>
   </url>
+
   <url>
-    <loc>https://techfix.nl/contact/</loc>
+    <loc>https://www.techfix.nl/contact/</loc>
   </url>
+
   <url>
-    <loc>https://techfix.nl/builds/</loc>
+    <loc>https://www.techfix.nl/builds/</loc>
   </url>
+
   <url>
-    <loc>https://techfix.nl/knowledge/</loc>
+    <loc>https://www.techfix.nl/builds/tf-001/</loc>
   </url>
+
   <url>
-    <loc>https://techfix.nl/performance-lab/</loc>
+    <loc>https://www.techfix.nl/builds/tf-002/</loc>
   </url>
+
   <url>
-    <loc>https://techfix.nl/custom-build/</loc>
+    <loc>https://www.techfix.nl/builds/tf-003/</loc>
   </url>
+
+  <url>
+    <loc>https://www.techfix.nl/knowledge/</loc>
+  </url>
+
+  <url>
+    <loc>https://www.techfix.nl/knowledge/beste-gpu-1440p-gaming/</loc>
+  </url>
+
+  <url>
+    <loc>https://www.techfix.nl/knowledge/overclocking-zonder-instabiliteit/</loc>
+  </url>
+
+  <url>
+    <loc>https://www.techfix.nl/knowledge/beste-workstation-build/</loc>
+  </url>
+
+  <url>
+    <loc>https://www.techfix.nl/performance-lab/</loc>
+  </url>
+
+  <url>
+    <loc>https://www.techfix.nl/custom-build/</loc>
+  </url>
+
 </urlset>
